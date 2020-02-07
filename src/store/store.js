@@ -9,7 +9,7 @@ import exampleVideoData from '../data/exampleVideoData.js';
 const initialState = {
   videoList: exampleVideoData,
   currentVideo: exampleVideoData[0],
-  searchQuery: ''
+  // searchQuery: ''
 }
 
 // is this always the same, is this the default?
