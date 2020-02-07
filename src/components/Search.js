@@ -1,5 +1,6 @@
 import React from 'react';
-
+import SearchContainer from '../containers/SearchContainer.js';
+import { handleSearchInputChange } from '../containers/SearchContainer.js';
 class Search extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +24,9 @@ class Search extends React.Component {
           className="form-control"
           type="text"
           value={this.state.value}
-          onChange={this.handleInputChange.bind(this)}
+          // this is what it was
+          onChange={handleSearchInputChange}
+          // we're thinking to change to a call to handleSearchInputChange, and somehow passin the search query entered in the field
         />
         <button className="btn hidden-sm-down">
           <span className="glyphicon glyphicon-search"></span>
@@ -31,6 +34,7 @@ class Search extends React.Component {
       </div>
     );
   }
+
 }
 
 export default Search;
