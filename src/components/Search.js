@@ -1,6 +1,8 @@
 import React from 'react';
-import SearchContainer from '../containers/SearchContainer.js';
-import { handleSearchInputChange } from '../containers/SearchContainer.js';
+// import SearchContainer from '../containers/SearchContainer.js';
+// import { handleSearchInputChange } from '../containers/SearchContainer.js';
+// import store from '../store/store.js';
+
 class Search extends React.Component {
   constructor(props) {
     super(props);
@@ -11,10 +13,12 @@ class Search extends React.Component {
   }
 
   handleInputChange(e) {
-    this.props.getYouTubeVideos(e.target.value);
+    console.log('test');
+    // this.props.getYouTubeVideos(e.target.value);
     this.setState({
       value: e.target.value
     });
+    this.props.handleSearchInputChange(e);
   }
 
   render() {
@@ -25,8 +29,7 @@ class Search extends React.Component {
           type="text"
           value={this.state.value}
           // this is what it was
-          onChange={handleSearchInputChange}
-          // we're thinking to change to a call to handleSearchInputChange, and somehow passin the search query entered in the field
+          onChange={this.handleInputChange.bind(this)}
         />
         <button className="btn hidden-sm-down">
           <span className="glyphicon glyphicon-search"></span>

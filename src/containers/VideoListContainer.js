@@ -11,20 +11,20 @@ import changeVideoList from '../actions/videoList.js';
 const mapStateToProps = (state) => {
   return {
     videos: state.videoList
-  }
-}
+  };
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
     handleVideoListEntryTitleClick: (video) => {
-      dispatch(changeVideo(video))
+      dispatch(changeVideo(video));
     }
-  }
-}
+  };
+};
 
 var VideoListContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(VideoList)
+)(VideoList);
 
 export default VideoListContainer;

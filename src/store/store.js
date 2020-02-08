@@ -3,15 +3,14 @@ import thunk from 'redux-thunk';
 import rootReducer from './../reducers/main.js';
 import exampleVideoData from '../data/exampleVideoData.js';
 
-// video list
-// current video
-// search query
+
 const initialState = {
   videoList: exampleVideoData,
   currentVideo: null
   // searchQuery: ''
-}
-console.log(rootReducer);
+};
+
+// console.log(rootReducer);
 var store = createStore(rootReducer, initialState, applyMiddleware(thunk));
 
 export default store;

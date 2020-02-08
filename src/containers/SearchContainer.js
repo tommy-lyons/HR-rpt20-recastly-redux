@@ -12,20 +12,20 @@ import handleVideoSearch from '../actions/search.js';
 const mapStateToProps = (state) => {
   return {
     state
-  }
-}
+  };
+};
 
 const mapDispatchToProps = dispatch => {
   return {
     handleSearchInputChange: (e) => {
-        dispatch(handleVideoSearch(e.target.value))
+      dispatch(handleVideoSearch(e.target.value));
     }
-  }
-}
+  };
+};
 
 var SearchContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Search)
+)(Search);
 
 export default SearchContainer;
