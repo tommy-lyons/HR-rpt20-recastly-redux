@@ -6,7 +6,7 @@ import exampleVideoData from '../data/exampleVideoData.js';
 
 const initialState = {
   videoList: exampleVideoData,
-  currentVideo: null
+  currentVideo: exampleVideoData[0]
   // searchQuery: ''
 };
 
