@@ -11,7 +11,8 @@ const mapStateToProps = state => {
 
 var VideoPlayerContainer =
   connect(
-    mapStateToProps
+    // solution video added null here, we left it without an argument
+    mapStateToProps, null
   )(VideoPlayer);
 
 export default VideoPlayerContainer;

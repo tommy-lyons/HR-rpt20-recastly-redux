@@ -2,8 +2,6 @@ import { connect } from 'react-redux';
 import Search from './../components/Search.js';
 import handleVideoSearch from '../actions/search.js';
 
-// var SearchContainer = () => {};
-
 // TODO: define a SearchContainer component which will hook up your action
 // dispatchers with your search component props.
 // HINT: use react-redux 'connect' method to generate a container component from
@@ -15,6 +13,7 @@ const mapStateToProps = (state) => {
   };
 };
 
+// what does fred do with this?
 const mapDispatchToProps = dispatch => {
   return {
     handleSearchInputChange: (value) => {
